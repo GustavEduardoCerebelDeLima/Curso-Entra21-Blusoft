@@ -114,57 +114,57 @@
 
 # ==================================================EX5=================================================================
 
-class Monkey:
-    def __init__(self, name, stomach='nothing here'):
-        self.name = name
-        self.stomach = stomach
-        self.ativo = True
-
-    def eat(self, food):
-        if self.ativo:
-            self.stomach = food
-        else:
-            print('this monkey does not exists')
-
-    def see_stomach(self):
-        if self.ativo:
-            print(f'the monkey ate {self.stomach} and he is done')
-        else:
-            print('this monkey does not exists')
-
-    def digest(self, digest_phase):
-        if self.ativo:
-            print(f'the monkey {self.name} ate {self.stomach} and he is at {digest_phase} digestion phase')
-        else:
-            print('this monkey does not exists')
-
-        if digest_phase == 'finished':
-            print(f'now {self.name} can eat again!')
-        else:
-            print(f'{self.name} you have to wait for your digestion finish to eat again!')
-
-    def delete_monkey(self):
-        if m1.eat(m2.name):
-            self.ativo = False
-
-
-while True:
-    m1 = Monkey(input('type the name of the monkey: '))
-    m2 = Monkey(input('type the name of the other monkey: '))
-    m1.eat(input('type the food to the monkey: '))
-    m2.eat(input('type the food to the monkey: '))
-    m1.see_stomach()
-    m2.see_stomach()
-    m1.digest(input('tpy the phase of digestion:'))
-    m2.digest(input('tpy the phase of digestion:'))
-    m1.eat(m2.name)
-    m1.see_stomach()
-    m2.eat(input('type the food to the monkey: '))
-    option = input('do you want to continue? [1] S [2] N : ').upper()
-    if option == 'S':
-        continue
-    else:
-        break
+# class Monkey:
+#     def __init__(self, name, stomach='nothing here'):
+#         self.name = name
+#         self.stomach = stomach
+#         self.ativo = True
+#
+#     def eat(self, food):
+#         if self.ativo:
+#             self.stomach = food
+#         else:
+#             print('this monkey does not exists')
+#
+#     def see_stomach(self):
+#         if self.ativo:
+#             print(f'the monkey ate {self.stomach} and he is done')
+#         else:
+#             print('this monkey does not exists')
+#
+#     def digest(self, digest_phase):
+#         if self.ativo:
+#             print(f'the monkey {self.name} ate {self.stomach} and he is at {digest_phase} digestion phase')
+#         else:
+#             print('this monkey does not exists')
+#
+#         if digest_phase == 'finished':
+#             print(f'now {self.name} can eat again!')
+#         else:
+#             print(f'{self.name} you have to wait for your digestion finish to eat again!')
+#
+#     def delete_monkey(self):
+#         if m1.eat(m2.name):
+#             self.ativo = False
+#
+#
+# while True:
+#     m1 = Monkey(input('type the name of the monkey: '))
+#     m2 = Monkey(input('type the name of the other monkey: '))
+#     m1.eat(input('type the food to the monkey: '))
+#     m2.eat(input('type the food to the monkey: '))
+#     m1.see_stomach()
+#     m2.see_stomach()
+#     m1.digest(input('tpy the phase of digestion:'))
+#     m2.digest(input('tpy the phase of digestion:'))
+#     m1.eat(m2.name)
+#     m1.see_stomach()
+#     m2.eat(input('type the food to the monkey: '))
+#     option = input('do you want to continue? [1] S [2] N : ').upper()
+#     if option == 'S':
+#         continue
+#     else:
+#         break
 
 # ==================================================EX6=================================================================
 
@@ -211,24 +211,51 @@ while True:
 
 # ==================================================EX7=================================================================
 
-class TeleVision:
-    def __init__(self, hight, length, width, color):
-        self.hight = hight
-        self.length = length
-        self.width = width
-        self.color = color
-        self.on = False
+# class TeleVision:
+#     def __init__(self, hight, length, width, color):
+#         self.hight = hight
+#         self.length = length
+#         self.width = width
+#         self.color = color
+#         self.on = False
+#
+#     def turnon(self):
+#         self.on = True
+#
+#     def channel(self, channels_num):
+#         if not self.on:
+#             print(f'you can not change channel without turning on the TV!')
+#         else:
+#             channels_num = range(1, 20)
+#             print(f'you have {channels_num} channels in your tv')
+#
+#     def change_channel(self, channels):
+#         pass
 
-    def turnon(self):
-        self.on = True
+# ==================================================EX8=================================================================
 
-    def channel(self, channels_num):
-        if not self.on:
-            print(f'you can not change channel without turning on the TV!')
+class Car:
+    def __init__(self, consume, max_tank=50):
+        self.__consume = consume
+        self.__max_tank = max_tank
+        self.__fuel_quantity = 0
+
+    def add_gas(self, liters):
+        self.__fuel_quantity += liters
+
+    def verify_fuel(self):
+        print(f'you got {self.__fuel_quantity} liters')
+
+    def ride(self, distance):
+        liter = distance / self.__consume
+        if liter > self.__consume:
+            print(f'there is no gas enough')
         else:
-            channels_num = range(1, 20)
-            print(f'you have {channels_num} channels in your tv')
-
-    def change_channel(self, channels):
+            self.__fuel_quantity -= liter
+            print(f'the trip was hit!')
 
 
+ferrari = Car(15)
+ferrari.add_gas(50)
+ferrari.ride(100)
+ferrari.verify_fuel()

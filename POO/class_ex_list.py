@@ -229,7 +229,7 @@
 #             channels_num = 20
 #             print(f'you have {channels_num} channels in your tv')
 #
-#     def change_channel(self, channels):
+#     def change_channel(self, new_channel):
 #         pass
 #
 #

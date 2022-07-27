@@ -39,12 +39,12 @@ class CocaCola:
 
 can = []
 for _ in range(1):
-    hight = input('type the hight:')
+    height = input('type the height:')
     volume = input('type the volume:')
     diameter = input('type the diameter:')
     material = input('type the material:')
     lable = input('type the lable:')
-    obj = CocaCola(hight, volume, diameter, material, lable)
+    obj = CocaCola(height, volume, diameter, material, lable)
     can.append(obj)
 
 print(repr(can))

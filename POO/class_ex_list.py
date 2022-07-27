@@ -41,26 +41,26 @@
 # s1.area()
 
 # #======================================================EX3==============================================================
-#
+
 # class Rectangle:
-#     def __init__(self, base, hight):
+#     def __init__(self, base, height):
 #         self.base = base
-#         self.hight = hight
+#         self.height = height
 #
-#     def change_sides(self, new_base, new_hight):
+#     def change_sides(self, new_base, new_height):
 #         self.base = new_base
-#         self.hight = new_hight
+#         self.height = new_height
 #
 #
 #     def sides_values(self):
 #         print(f'{self.base} is the new base')
-#         print(f'{self.hight} is the new hight')
+#         print(f'{self.height} is the new height')
 #
 #     def area(self):
-#         return self.base * self.hight
+#         return self.base * self.height
 #
 #     def perimeter(self):
-#         return (self.base * 2) + (self.hight * 2)
+#         return (self.base * 2) + (self.height * 2)
 #
 #
 # rec = Rectangle(int(input('type the base size: ')), int(input('type the base size: ')))
@@ -80,8 +80,9 @@
 #         self.fuel_quantity = fuel_quantity
 #
 #     def to_fuel_value(self, put):
-#         print(f'the price of the liter is {self.liter_value}')
-#         print(f'you have chosen {put} liters to fuel your vehicle')
+#         print(f'you want to fuel {put} dollars')
+#         print(f'you got {put/self.liter_value:.2f} liters fueled')
+#         self.fuel_quantity -= (put/self.liter_value)
 #
 #     def to_fuel_liter(self, put_quantity):
 #         fuel_value = self.liter_value * put_quantity
@@ -90,7 +91,7 @@
 #
 #     def change_value(self, new_value):
 #         self.liter_value = new_value
-#         print(f'\nnow thw value of the liter is {self.liter_value}')
+#         print(f'\nnow thw value of the liter is {self.liter_value:.2f}')
 #
 #     def change_fuel(self, new_fuel):
 #         self.type_fuel = new_fuel
@@ -98,11 +99,11 @@
 #
 #     def change_quantity(self, new_quantity):
 #         self.fuel_quantity = new_quantity
-#         print(f'\nnow we got {self.fuel_quantity} liters in the pump')
+#         print(f'\nnow we got {self.fuel_quantity:.2f} liters in the pump')
 #
 #
 # b1 = FuelPump(input('type of fuel: '), int(input('value of fuel: ')), int(input('fuel quantity: ')))
-# b1.to_fuel_value(5)
+# b1.to_fuel_value(50)
 # b1.to_fuel_liter(5)
 # print(f' we got {b1.fuel_quantity} litres in the pump after this fueling')
 # b1.change_value(10)
@@ -118,25 +119,25 @@
 #     def __init__(self, name, stomach='nothing here'):
 #         self.name = name
 #         self.stomach = stomach
-#         self.ativo = True
+#         self.active = True
 #
 #     def eat(self, food):
-#         if self.ativo:
+#         if self.active:
 #             self.stomach = food
 #         else:
-#             print('this monkey does not exists')
+#             print('this monkey does not exist')
 #
 #     def see_stomach(self):
-#         if self.ativo:
-#             print(f'the monkey ate {self.stomach} and he is done')
+#         if self.active:
+#             print(f'the monkey {self.name} ate {self.stomach} and he is done')
 #         else:
-#             print('this monkey does not exists')
+#             print('this monkey does not exist')
 #
 #     def digest(self, digest_phase):
-#         if self.ativo:
+#         if self.active:
 #             print(f'the monkey {self.name} ate {self.stomach} and he is at {digest_phase} digestion phase')
 #         else:
-#             print('this monkey does not exists')
+#             print('this monkey does not exist')
 #
 #         if digest_phase == 'finished':
 #             print(f'now {self.name} can eat again!')
@@ -144,8 +145,8 @@
 #             print(f'{self.name} you have to wait for your digestion finish to eat again!')
 #
 #     def delete_monkey(self):
-#         if m1.eat(m2.name):
-#             self.ativo = False
+#         if self.eat(input('type the name of the other monkey: ')):
+#             self.active = False
 #
 #
 # while True:
@@ -158,8 +159,8 @@
 #     m1.digest(input('tpy the phase of digestion:'))
 #     m2.digest(input('tpy the phase of digestion:'))
 #     m1.eat(m2.name)
-#     m1.see_stomach()
-#     m2.eat(input('type the food to the monkey: '))
+#     m1.digest('finished')
+#     m2.see_stomach()
 #     option = input('do you want to continue? [1] S [2] N : ').upper()
 #     if option == 'S':
 #         continue
@@ -198,7 +199,6 @@
 # while True:
 #     tamagotchi = Tamagotchi(input('name:'), int(input('hungry:')), int(input('health:')), int(input('age: ')))
 #     print(f'{tamagotchi.name} is {tamagotchi.hungry}% hungry, {tamagotchi.health}% health and he is {tamagotchi.age}')
-#
 #     tamagotchi.alter(input(' new name:'), int(input('new hungry:')), int(input('new health:')), int(input('new age: ')))
 #     tamagotchi.show()
 #     tamagotchi.mood()
@@ -212,50 +212,55 @@
 # ==================================================EX7=================================================================
 
 # class TeleVision:
-#     def __init__(self, hight, length, width, color):
-#         self.hight = hight
+#     def __init__(self, height, length, width, color):
+#         self.height = height
 #         self.length = length
 #         self.width = width
 #         self.color = color
 #         self.on = False
 #
-#     def turnon(self):
+#     def turn_on(self):
 #         self.on = True
 #
-#     def channel(self, channels_num):
+#     def channel(self):
 #         if not self.on:
 #             print(f'you can not change channel without turning on the TV!')
 #         else:
-#             channels_num = range(1, 20)
+#             channels_num = 20
 #             print(f'you have {channels_num} channels in your tv')
 #
-#     def change_channel(self, channels):
+#     def change_channel(self, new_channel):
 #         pass
+#
+#
+# tv = TeleVision(10, 10, 10, 'black')
+# tv.turn_on()
+# tv.channel()
 
 # ==================================================EX8=================================================================
 
-class Car:
-    def __init__(self, consume, max_tank=50):
-        self.__consume = consume
-        self.__max_tank = max_tank
-        self.__fuel_quantity = 0
-
-    def add_gas(self, liters):
-        self.__fuel_quantity += liters
-
-    def verify_fuel(self):
-        print(f'you got {self.__fuel_quantity} liters')
-
-    def ride(self, distance):
-        liter = distance / self.__consume
-        if liter > self.__consume:
-            print(f'there is no gas enough')
-        else:
-            self.__fuel_quantity -= liter
-            print(f'the trip was hit!')
-
-
-ferrari = Car(15)
-ferrari.add_gas(50)
-ferrari.ride(100)
-ferrari.verify_fuel()
+# class Car:
+#     def __init__(self, consume, max_tank=50):
+#         self.__consume = consume
+#         self.__max_tank = max_tank
+#         self.__fuel_quantity = 0
+#
+#     def add_gas(self, liters):
+#         self.__fuel_quantity += liters
+#
+#     def verify_fuel(self):
+#         print(f'you got {self.__fuel_quantity} liters')
+#
+#     def ride(self, distance):
+#         liter = distance / self.__consume
+#         if liter > self.__consume:
+#             print(f'there is no gas enough')
+#         else:
+#             self.__fuel_quantity -= liter
+#             print(f'the trip was hit!')
+#
+#
+# ferrari = Car(15)
+# ferrari.add_gas(50)
+# ferrari.ride(100)
+# ferrari.verify_fuel()

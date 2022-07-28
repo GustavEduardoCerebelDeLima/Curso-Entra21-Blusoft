@@ -35,6 +35,8 @@ class Companies:
 
 
 companies = Companies()
+
+
 # companies.create_table_companiy()
 # companies.insert_company()
 # companies.show_table()
@@ -70,6 +72,8 @@ class Aircraft:
 
 
 aircraft = Aircraft()
+
+
 # aircraft.create_table_aircraft()
 # aircraft.insert_aircraft()
 # aircraft.show_table()
@@ -112,6 +116,76 @@ class Airport:
 
 
 airport = Airport()
+
+
 # airport.create_table_airport()
 # airport.insert_airport()
 # airport.show_table()
+
+
+class Fly:
+    def __init__(self):
+        pass
+
+    def create_table_fly(self):
+        cursor.execute('CREATE TABLE IF NOT EXISTS Fly('
+                       'fly_id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,'
+                       'departure_date TEXT ,'
+                       'departure_hour TEXT ,'
+                       'aircraft_id_taking_off INTEGER ,'
+                       'aircraft_id_bound INTEGER ,'
+                       'company_id INTEGER,'
+                       'passengers INTEGER,'
+                       'available_seats INTEGER,'
+                       'carried_luggage INTEGER,'
+                       'aircraft_id INTEGER,'
+                       'arrival_date INTEGER,'
+                       'arrival_hour INTEGER,'
+                       'fly_type TEXT)')
+
+        connection.commit()
+
+    def insert_fly(self):
+        departure_date = input('type the departure_date: ')
+        departure_hour = input('type the departure_hour: ')
+        aircraft_id_taking_off = input('type the aircraft_id_taking_off: ')
+        aircraft_id_bound = input('type the aircraft_id_bound: ')
+        company_id = input('type the company_id: ')
+        passengers = input('type the passengers: ')
+        available_seats = input('type the available_seats: ')
+        carried_luggage = input('type the carried_luggage: ')
+        aircraft_id = input('type the aircraft_id: ')
+        arrival_date = input('type the arrival_date: ')
+        arrival_hour = input('type the arrival_hour: ')
+        fly_type = input('type the fly_type: ')
+        cursor.execute('INSERT INTO Fly('
+                       'departure_date, departure_hour,'
+                       ' aircraft_id_taking_off, aircraft_id_bound,'
+                       'company_id, passengers, available_seats, carried_luggage,'
+                       'aircraft_id, arrival_date, arrival_hour, fly_type)'
+                       'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (departure_date, departure_hour,
+                                                                       aircraft_id_taking_off, aircraft_id_bound,
+                                                                       company_id, passengers, available_seats,
+                                                                       carried_luggage,
+                                                                       aircraft_id, arrival_date, arrival_hour,
+                                                                       fly_type))
+
+        connection.commit()
+
+    def show_table(self):
+        cursor.execute('SELECT * FROM Fly')
+        for i in cursor.fetchall():
+            print(f'{i[0]} - departure date:{i[1]} - departure hour:{i[2]} - aircraft id taking off:{i[3]}\n'
+                  f' - aircraft id bound:{i[4]} - company id:{i[5]} - passengers:{i[6]} - available seats:{i[7]}\n'
+                  f' - carried luggage:{i[8]}kg - aircraft id:{i[9]} - arrival date:{i[10]}\n'
+                  f' - arrival hour:{i[11]} - fly type:{i[12]}')
+
+
+fly = Fly()
+# fly.create_table_fly()
+# fly.insert_fly()
+# fly.show_table()
+
+
+cursor.close()
+connection.close()

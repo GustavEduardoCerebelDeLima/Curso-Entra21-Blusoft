@@ -28,18 +28,44 @@ class Companies:
 
         connection.commit()
 
-    def show_table(self):
+    def edit_company_table(self):
+        option = int(input('what do you want to edit [1] name [2] nationality [3] initials:'))
+        if option == 1:
+            name = input('type the new name: ')
+            id = int(input('type the id of the company you want to edit: '))
+            cursor.execute(f'UPDATE Airline_Companies SET name = "{name}" WHERE company_id={id}')
+            connection.commit()
+        elif option == 2:
+            nationality = input('type the new nationality: ')
+            id = int(input('type the id of the company you want to edit: '))
+            cursor.execute(f'UPDATE Airline_Companies SET nationality = "{nationality}" WHERE company_id={id}')
+            connection.commit()
+        elif option == 3:
+            initials = input('type the new initials: ')
+            id = int(input('type the id of the company you want to edit: '))
+            cursor.execute(f'UPDATE Airline_Companies SET initials = "{initials}" WHERE company_id={id}')
+            connection.commit()
+        else:
+            print('Please, choose a option between 1 and 3!')
+
+    def delete_company(self):
+        id = int(input('type the id of the company you want to delete: '))
+        cursor.execute(f'DELETE FROM Airline_Companies WHERE company_id={id}')
+        connection.commit()
+
+    def show_company_table(self):
         cursor.execute('SELECT * FROM Airline_Companies')
         for i in cursor.fetchall():
             print(f'{i[0]} - Company:{i[1]} - Nationality:{i[2]} - Initials:{i[3]}')
 
 
 companies = Companies()
-
-
 # companies.create_table_companiy()
 # companies.insert_company()
-# companies.show_table()
+# companies.show_company_table()
+# companies.edit_company_table()
+# companies.delete_company()
+# companies.show_company_table()
 
 
 class Aircraft:
@@ -65,18 +91,44 @@ class Aircraft:
 
         connection.commit()
 
-    def show_table(self):
+    def edit_aircraft_table(self):
+        option = int(input('what do you want to edit [1] model [2] available_seats [3] luggage_limit:'))
+        if option == 1:
+            model = input('type the new model: ')
+            id = int(input('type the id of the aircraft you want to edit: '))
+            cursor.execute(f'UPDATE Aircraft SET model = "{model}" WHERE aircraft_id={id}')
+            connection.commit()
+        elif option == 2:
+            available_seats = input('type the new available_seats: ')
+            id = int(input('type the id of the aircraft you want to edit: '))
+            cursor.execute(f'UPDATE Aircraft SET available_seats = "{available_seats}" WHERE aircraft_id={id}')
+            connection.commit()
+        elif option == 3:
+            luggage_limit = input('type the new luggage_limit: ')
+            id = int(input('type the id of the aircraft you want to edit: '))
+            cursor.execute(f'UPDATE Aircraft SET luggage_limit = "{luggage_limit}" WHERE aircraft_id={id}')
+            connection.commit()
+        else:
+            print('Please, choose a option between 1 and 3!')
+
+    def delete_aircraft(self):
+        id = int(input('type the id of the aircraft you want to delete: '))
+        cursor.execute(f'DELETE FROM Aircraft WHERE aircraft_id={id}')
+        connection.commit()
+
+    def show_aircraft_table(self):
         cursor.execute('SELECT * FROM Aircraft')
         for i in cursor.fetchall():
             print(f'{i[0]} - Model:{i[1]} - Available seats:{i[2]} - Luggage limit:{i[3]}kg')
 
 
 aircraft = Aircraft()
-
-
 # aircraft.create_table_aircraft()
 # aircraft.insert_aircraft()
-# aircraft.show_table()
+# aircraft.show_aircraft_table()
+# aircraft.edit_aircraft_table()
+# aircraft.delete_aircraft()
+# aircraft.show_aircraft_table()
 
 
 class Airport:
@@ -108,7 +160,49 @@ class Airport:
 
         connection.commit()
 
-    def show_table(self):
+    def edit_airport_table(self):
+        option = int(input('what do you want to edit\n'
+                           '[1] name [2] initials [3] city\n'
+                           '[4] state [5] country [6] continent:'))
+        if option == 1:
+            name = input('type the new name: ')
+            id = int(input('type the id of the airport you want to edit: '))
+            cursor.execute(f'UPDATE Airport SET name = "{name}" WHERE airport_id={id}')
+            connection.commit()
+        elif option == 2:
+            initials = input('type the new initials: ')
+            id = int(input('type the id of the airport you want to edit: '))
+            cursor.execute(f'UPDATE Airport SET initials = "{initials}" WHERE airport_id={id}')
+            connection.commit()
+        elif option == 3:
+            city = input('type the new city: ')
+            id = int(input('type the id of the airport you want to edit: '))
+            cursor.execute(f'UPDATE Airport SET city = "{city}" WHERE airport_id={id}')
+            connection.commit()
+        elif option == 4:
+            state = input('type the new state: ')
+            id = int(input('type the id of the airport you want to edit: '))
+            cursor.execute(f'UPDATE Airport SET state = "{state}" WHERE airport_id={id}')
+            connection.commit()
+        elif option == 5:
+            country = input('type the new country: ')
+            id = int(input('type the id of the airport you want to edit: '))
+            cursor.execute(f'UPDATE Airport SET country = "{country}" WHERE airport_id={id}')
+            connection.commit()
+        elif option == 6:
+            continent = input('type the new continent: ')
+            id = int(input('type the id of the airport you want to edit: '))
+            cursor.execute(f'UPDATE Airport SET continent = "{continent}" WHERE airport_id={id}')
+            connection.commit()
+        else:
+            print('Please, choose a option between 1 and 6!')
+
+    def delete_airport(self):
+        id = int(input('type the id of the airport you want to delete: '))
+        cursor.execute(f'DELETE FROM Airport WHERE airport_id={id}')
+        connection.commit()
+
+    def show_airport_able(self):
         cursor.execute('SELECT * FROM Airport')
         for i in cursor.fetchall():
             print(f'{i[0]} - Name:{i[1]} - Initials:{i[2]}'
@@ -116,11 +210,12 @@ class Airport:
 
 
 airport = Airport()
-
-
 # airport.create_table_airport()
 # airport.insert_airport()
-# airport.show_table()
+# airport.show_airport_able()
+# airport.edit_airport_table()
+# airport.delete_airport()
+# airport.show_airport_able()
 
 
 class Fly:
@@ -131,7 +226,7 @@ class Fly:
         cursor.execute('CREATE TABLE IF NOT EXISTS Fly('
                        'fly_id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,'
                        'departure_date TEXT ,'
-                       'departure_hour TEXT ,'
+                       'departure_hour INTEGER ,'
                        'aircraft_id_taking_off INTEGER ,'
                        'aircraft_id_bound INTEGER ,'
                        'company_id INTEGER,'
@@ -139,7 +234,7 @@ class Fly:
                        'available_seats INTEGER,'
                        'carried_luggage INTEGER,'
                        'aircraft_id INTEGER,'
-                       'arrival_date INTEGER,'
+                       'arrival_date TEXT,'
                        'arrival_hour INTEGER,'
                        'fly_type TEXT)')
 
@@ -172,20 +267,96 @@ class Fly:
 
         connection.commit()
 
-    def show_table(self):
+    def edit_airport_table(self):
+        option = int(input('what do you want to edit\n'
+                           '[1] departure_date [2] departure_hour [3] aircraft_id_taking_off [4] aircraft_id_bound\n'
+                           '[5] company_id [6] passengers [7] available_seats [8] carried_luggage\n'
+                           '[9] aircraft_id [10] arrival_date [11] arrival_hour [12] fly_type:'))
+        if option == 1:
+            departure_date = input('type the new departure_date: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET departure_date = "{departure_date}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 2:
+            departure_hour = input('type the new departure_hour: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET departure_hour = "{departure_hour}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 3:
+            aircraft_id_taking_off = input('type the new aircraft_id_taking_off: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET aircraft_id_taking_off = "{aircraft_id_taking_off}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 4:
+            aircraft_id_bound = input('type the new aircraft_id_bound: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET aircraft_id_bound = "{aircraft_id_bound}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 5:
+            company_id = input('type the new company_id: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET company_id = "{company_id}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 6:
+            passengers = input('type the new passengers: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET passengers = "{passengers}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 7:
+            available_seats = input('type the new available_seats: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET available_seats = "{available_seats}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 8:
+            carried_luggage = input('type the new carried_luggage: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET carried_luggage = "{carried_luggage}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 9:
+            aircraft_id = input('type the new aircraft_id: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET aircraft_id = "{aircraft_id}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 10:
+            arrival_date = input('type the new arrival_date: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET arrival_date = "{arrival_date}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 11:
+            arrival_hour = input('type the new arrival_hour: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET arrival_hour = "{arrival_hour}" WHERE fly_id={id}')
+            connection.commit()
+        elif option == 12:
+            fly_type = input('type the new fly_type: ')
+            id = int(input('type the id of the fly you want to edit: '))
+            cursor.execute(f'UPDATE Fly SET fly_type = "{fly_type}" WHERE fly_id={id}')
+            connection.commit()
+        else:
+            print('Please, choose a option between 1 and 12!')
+
+    def delete_fly(self):
+        id = int(input('type the id of the fly you want to delete: '))
+        cursor.execute(f'DELETE FROM Fly WHERE fly_id={id}')
+        connection.commit()
+
+    def show_fly_table(self):
         cursor.execute('SELECT * FROM Fly')
         for i in cursor.fetchall():
             print(f'{i[0]} - departure date:{i[1]} - departure hour:{i[2]} - aircraft id taking off:{i[3]}\n'
-                  f' - aircraft id bound:{i[4]} - company id:{i[5]} - passengers:{i[6]} - available seats:{i[7]}\n'
-                  f' - carried luggage:{i[8]}kg - aircraft id:{i[9]} - arrival date:{i[10]}\n'
-                  f' - arrival hour:{i[11]} - fly type:{i[12]}')
+                  f'aircraft id bound:{i[4]} - company id:{i[5]} - passengers quantity:{i[6]} - available seats:{i[7]}\n'
+                  f'carried luggage:{i[8]}kg - aircraft id:{i[9]} - arrival date:{i[10]}\n'
+                  f'arrival hour:{i[11]} - fly type:{i[12]}')
 
 
 fly = Fly()
 # fly.create_table_fly()
 # fly.insert_fly()
-# fly.show_table()
+# fly.show_fly_table()
+# fly.edit_airport_table()
+# fly.delete_fly()
+# fly.show_fly_table()
 
 
-cursor.close()
+cursor.close()      # Always close because of attacks!
 connection.close()

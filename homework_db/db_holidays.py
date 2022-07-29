@@ -60,6 +60,8 @@ class Companies:
 
 
 companies = Companies()
+
+
 # companies.create_table_companiy()
 # companies.insert_company()
 # companies.show_company_table()
@@ -123,6 +125,8 @@ class Aircraft:
 
 
 aircraft = Aircraft()
+
+
 # aircraft.create_table_aircraft()
 # aircraft.insert_aircraft()
 # aircraft.show_aircraft_table()
@@ -210,6 +214,8 @@ class Airport:
 
 
 airport = Airport()
+
+
 # airport.create_table_airport()
 # airport.insert_airport()
 # airport.show_airport_able()
@@ -340,6 +346,38 @@ class Fly:
         cursor.execute(f'DELETE FROM Fly WHERE fly_id={id}')
         connection.commit()
 
+    def fly_report(self):
+        option = int(input('By which filter you want to see the results [1] Period [2] Company [3] Airport: '))
+        if option == 1:
+            departure_date = input('What the date of the departure you want to filter?:')
+            try:            # using try to avoid the possible error if the value is not in the table
+                cursor.execute(f'SELECT passengers,available_seats,carried_luggage FROM Fly'
+                               f' WHERE departure_date="{departure_date}"')
+                for i in cursor.fetchall():
+                    print(f'Departure date {departure_date} - passengers:{i[0]}'
+                          f' - available_seats:{i[1]} - carried_luggage:{i[2]}')
+            except:
+                print('Sorry, this date does not exists in our information! Try again!')
+        elif option == 2:
+            company_id = int(input('What the id of the company do you want to filter?: '))
+            try:
+                cursor.execute(f'SELECT passengers,available_seats,carried_luggage FROM Fly'
+                               f' WHERE company_id={company_id}')
+                for i in cursor.fetchall():
+                    print(f'Company ID {company_id} - passengers:{i[0]} - available_seats:{i[1]} - carried_luggage:{i[2]}')
+            except:
+                print('Sorry, this id of the company does not exists in our information! Try again!')
+        elif option == 3:
+            aircraft_id_taking_off = int(input('What the id of the airport do you want to filter?: '))
+            try:
+                cursor.execute(f'SELECT passengers,available_seats,carried_luggage FROM Fly'
+                               f' WHERE aircraft_id_taking_off={aircraft_id_taking_off}')
+                for i in cursor.fetchall():
+                    print(f'Airport ID {aircraft_id_taking_off} - passengers:{i[0]}'
+                          f' - available_seats:{i[1]} - carried_luggage:{i[2]}')
+            except:
+                print('Sorry, this id of the airport does not exists in our information! Try again!')
+
     def show_fly_table(self):
         cursor.execute('SELECT * FROM Fly')
         for i in cursor.fetchall():
@@ -356,7 +394,7 @@ fly = Fly()
 # fly.edit_airport_table()
 # fly.delete_fly()
 # fly.show_fly_table()
+# fly.fly_report()
 
-
-cursor.close()      # Always close because of attacks!
+cursor.close()  # Always close because of attacks!
 connection.close()

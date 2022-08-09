@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    padding: 10px;
+    background: linear-gradient(114.79deg, #041A43 52.5%, #13041F 104.11%), linear-gradient(115.16deg, #000A16 32.45%, #041A43 102.02%);
+}
+
+header{
+    padding: 0;
+}
+
+.cabecalho{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 50%;
+}
+
+.menu{
+    padding-top: 20px;
+    width: 50%;
+    text-align: right;
+}
+
+.produtor{
+    display: flex;
+    margin-top: -30px;
+}
+
+.signin{     
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#imgcentral{
+    text-align: center;
+}
+
+.baner{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 433px;
+    width: 828px;
+    left: 306px;
+    top: 268px;
+    border-radius: 7px;
+}
+
+.text{
+    margin-top: 30px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.pagto{
+    background-color: rgb(194, 194, 194);
+}
+
+.comprar{
+    background-color: rgb(84, 196, 84);
+}
+.comprar:hover{
+    background-color: rgb(40, 71, 8);
+}
+
+#rodape{
+    text-align: center;
+}
+
+.pagto{
+position: absolute;
+width: 423px;
+height: 235px;
+left: 938px;
+top: 680px;
+
+background: linear-gradient(180deg, #E6E6E6 0%, #D3DDEB 100%);
+border-radius: 27px;
+}
+
+#container  {  	
+	margin: 1em auto;  	
+	width: 650px;  	
+} 

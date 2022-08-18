@@ -12,12 +12,12 @@
         let second_side = parseFloat(prompt('type the mesure of the second side: '))
         let third_side = parseFloat(prompt('type the mesure of the third side: '))
 
-        if ((first_side > (second_side + third_side)) ||  (second_side > (first_side + third_side)) (third_side > (second_side + first_side))){
+        if (first_side > (second_side + third_side) ||  second_side > (first_side + third_side) || third_side > (second_side + first_side)){
             alert('This is not a triangle!')
-        }else if ((second_side == first_side != third_side) || (third_side == first_side != second_side) || (third_side == second_side != first_side)){
-            alert('This is a isoceles triangle!')
-        }else if (first_side == second_side == third_side){
+        }else if (first_side == second_side && first_side == third_side){
             alert('This is a equilateral triangle!')
+        }else if (second_side == first_side || third_side == first_side || third_side == second_side){
+    alert('This is a isoceles triangle!')
         } else {
             alert('This is a scalene triangle!')
         }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mean(){
+            let name = prompt('What is the name of the student?')
+            let grade1 = parseFloat(prompt(`Type the fist grade of ${name}:`))
+            let grade2 = parseFloat(prompt(`Type the second grade of ${name}: `))
+            let mean = (grade1 + grade2)/2
+
+            let result = document.getElementById('result')
+            result.innerHTML = `<p>Calculating the final mean of ${name}...</p>`
+            result.innerHTML += `<p>The grades were ${grade1} and ${grade2}</p>`
+            result.innerHTML += `<p>The final mean of ${name} was ${mean}...</p>`
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculating mean 0.1</h1>
+    <input type="button" value="Calculate the mean" onclick="mean()">
+    <section id="result">
+        <p>Here comes the aswer...</p>
+    </section>
+</body>
+</html>

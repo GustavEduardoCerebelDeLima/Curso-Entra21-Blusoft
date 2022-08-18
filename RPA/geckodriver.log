@@ -671,3 +671,138 @@ interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431
 webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
 1659383050144	Marionette	INFO	Stopped listening on port 64871
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660581056350	geckodriver	INFO	Listening on 127.0.0.1:54146
+1660581059461	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54147" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileifW69W"
+1660581060622	Marionette	INFO	Marionette enabled
+1660581060629	Marionette	INFO	Listening on port 54169
+WebDriver BiDi listening on ws://localhost:54147
+Read port: 54169
+1660581060849	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileifW69W\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54147/devtools/browser/555ac0f9-330e-4473-8f0a-95274a755464
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660581072291	Marionette	INFO	Stopped listening on port 54169
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+!!! error running onStopped callback: TypeError: callback is not a function
+1660581095517	geckodriver	INFO	Listening on 127.0.0.1:54208
+1660581098597	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54209" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofile3QRpTo"
+1660581099007	Marionette	INFO	Marionette enabled
+1660581099012	Marionette	INFO	Listening on port 54218
+WebDriver BiDi listening on ws://localhost:54209
+Read port: 54218
+1660581099188	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofile3QRpTo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54209/devtools/browser/16ba10f4-8af9-4021-ad44-6bcd15754ec3
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660581108296	Marionette	INFO	Stopped listening on port 54218
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660581128557	geckodriver	INFO	Listening on 127.0.0.1:54299
+1660581131680	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54300" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileeqhp0z"
+1660581132127	Marionette	INFO	Marionette enabled
+1660581132134	Marionette	INFO	Listening on port 54336
+WebDriver BiDi listening on ws://localhost:54300
+Read port: 54336
+1660581132324	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileeqhp0z\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54300/devtools/browser/d3874726-c41e-43d7-ab74-af9600bbed21
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660581454702	Marionette	INFO	Stopped listening on port 54336
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+rofile" "C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofilecg7o4D"
+1660581207300	Marionette	INFO	Marionette enabled
+1660581207307	Marionette	INFO	Listening on port 54419
+WebDriver BiDi listening on ws://localhost:54409
+Read port: 54419
+1660581207495	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofilecg7o4D\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54409/devtools/browser/46015283-829d-4fe0-9767-4f5f3222cd28
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660581330443	Marionette	INFO	Stopped listening on port 54419
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660581360227	geckodriver	INFO	Listening on 127.0.0.1:54650
+1660581363365	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54651" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofiler95BcL"
+1660581364215	Marionette	INFO	Marionette enabled
+1660581364222	Marionette	INFO	Listening on port 54667
+WebDriver BiDi listening on ws://localhost:54651
+Read port: 54667
+1660581364414	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofiler95BcL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54651/devtools/browser/c80fce2b-a398-4b35-8820-ff12914aca44
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660581450932	Marionette	INFO	Stopped listening on port 54667
+1660767760309	geckodriver	INFO	Listening on 127.0.0.1:65313
+1660767763353	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65314" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileopiE1y"
+1660767763848	Marionette	INFO	Marionette enabled
+1660767763855	Marionette	INFO	Listening on port 65323
+WebDriver BiDi listening on ws://localhost:65314
+Read port: 65323
+1660767764056	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileopiE1y\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65314/devtools/browser/4d9a77a8-c2c5-40df-935e-5b855c05adb0
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660767820751	Marionette	INFO	Stopped listening on port 65323
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 906: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+fileJZLRK2"
+1660767806066	Marionette	INFO	Marionette enabled
+1660767806072	Marionette	INFO	Listening on port 65368
+WebDriver BiDi listening on ws://localhost:65359
+Read port: 65368
+1660767806246	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileJZLRK2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65359/devtools/browser/2d5b3245-a9b1-4db3-ae9d-302f69937d20
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660767902981	Marionette	INFO	Stopped listening on port 65368
+e-debugging-port" "65416" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileS8s5zO"
+1660767879403	Marionette	INFO	Marionette enabled
+1660767879409	Marionette	INFO	Listening on port 65427
+WebDriver BiDi listening on ws://localhost:65416
+Read port: 65427
+1660767879577	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileS8s5zO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65416/devtools/browser/912a89ab-cf6f-4ee3-814f-db36cbb4474e
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660767935957	Marionette	INFO	Stopped listening on port 65427
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 906: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+fileLAgbke"
+1660767918442	Marionette	INFO	Marionette enabled
+1660767918448	Marionette	INFO	Listening on port 65474
+WebDriver BiDi listening on ws://localhost:65465
+Read port: 65474
+1660767918638	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\entra21\\AppData\\Local\\Temp\\rust_mozprofileLAgbke\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65465/devtools/browser/6a17a540-497b-42b9-9bbb-72bd7683ed36
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://externo.proway.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660767937788	Marionette	INFO	Stopped listening on port 65474
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function triangle(){
+        let first_side = parseInt(document.getElementById('first side').value)
+        let second_side = parseInt(document.getElementById('second side').value)
+        let third_side = parseInt(document.getElementById('third side').value)
+        let answer = document.getElementById('answer')
+
+        if (first_side > (second_side + third_side) ||  second_side > (first_side + third_side) || third_side > (second_side + first_side)){
+            answer.innerHTML = 'This is not a triangle!'
+            answer.style.color = 'red'
+        }else if (first_side == second_side && first_side == third_side){
+            answer.innerHTML = 'This is a equilateral triangle!'
+            answer.style.color = 'green'
+        }else if (second_side == first_side || third_side == first_side || third_side == second_side){
+            answer.innerHTML = 'This is a isoceles triangle!'
+            answer.style.color = 'blue'
+        } else {
+            answer.innerHTML = 'This is a scalene triangle!'
+            answer.style.color = 'darkblue'
+        }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type="text" name="Fist side:" id="first side">
+
+    <input type="text" name="Second side:" id="second side">
+
+    <input type="text" name="Third side:" id="third side">
+
+    <input type="button" value="Check it out" id="button" onclick="triangle()">
+
+    <h1 id="answer"></h1>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(){
+            let num = parseFloat(prompt('Type a number: '))
+            let result = document.getElementById('result')
+            result.innerHTML = `${num} plus is ${num} is ${num + num}`
+        } 
+    </script>
+</head>
+<body>
+    <h1>Summing two numbers</h1>
+    <input type="button" value="Start to sum" onclick="calculate()">
+    <h3 id="result">The result comes here...</h3>
+</body>
+</html>

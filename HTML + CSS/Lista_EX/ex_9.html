@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var clicks = 0
+
+        function show_cliks_number(){
+            let result = document.getElementById('result')
+            clicks++
+            result.innerHTML = `<p>The number of clicks are ${clicks}</p>`
+        }
+
+        function zero_counter(){
+            clicks = 0
+            result.innerHTML = null
+        }
+    </script>
+</head>
+<body>
+    <h1>Clcks counter</h1>
+    <button onclick="show_cliks_number()">Click here!</button>
+    <button onclick="zero_counter()">Zero the counter</button>
+    <section id="result">
+        <p>The counter is in <mark>0</mark> clicks</p>
+    </section>
+</body>
+</html>

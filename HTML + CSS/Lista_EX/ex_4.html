@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function text(){
+            let name = prompt('What is your name?')
+            let answer = document.getElementById('answer')
+            answer.innerHTML = `Hello, ${name}. Nice to meet you!🖖`
+        } 
+    </script>
+</head>
+<body>
+    <h1>Trabalhando com dados 2.0</h1>
+    <input type="button" value="Click to start" id="button" onclick="text()">
+    <h1 id="answer">Here we got the answer...</h1>
+</body>
+</html>

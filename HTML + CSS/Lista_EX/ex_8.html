@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mean(){
+            let num = parseFloat(prompt(`Type the fist grade of ${name}:`))
+
+            let result = document.getElementById('result')
+            result.innerHTML = `<p>The absolute value is ${Math.abs(num)}</p>`
+            result.innerHTML += `<p>The integer number is ${Math.trunc(num)}</p>`
+            result.innerHTML += `<p>The square root is ${Math.sqrt(num)}</p>`
+            result.innerHTML += `<p>The closer integer number is ${Math.round(num)}</p>`
+            result.innerHTML += `<p>The cubic root is ${Math.cbrt(num)}</p>`
+            result.innerHTML += `<p>The value of ${num}<sup>2</sup> is ${Math.pow(num, 2)}</p>`
+            result.innerHTML += `<p>The value of ${num}<sup>3</sup> is ${Math.pow(num, 3)}</p>`
+        }
+    </script>
+</head>
+<body>
+    <h1>Many caculation with JS</h1>
+    <input type="button" value="Calculate the mean" onclick="mean()">
+    <hr>
+    <section id="result">
+        <p>Here comes the aswer...</p>
+    </section>
+</body>
+</html>

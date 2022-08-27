@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef41d753-bf62-426b-8c6c-bbb77dc84bcc" name="Changes" comment="POO">
-      <change afterPath="$PROJECT_DIR$/Qt_Python/Janela.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Qt_Python/Window_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Qt_Python/window_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPA/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/RPA/geckodriver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPA/login_web.py" beforeDir="false" afterPath="$PROJECT_DIR$/RPA/login_web.py" afterDir="false" />
-    </list>
+    <list default="true" id="ef41d753-bf62-426b-8c6c-bbb77dc84bcc" name="Changes" comment="POO" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

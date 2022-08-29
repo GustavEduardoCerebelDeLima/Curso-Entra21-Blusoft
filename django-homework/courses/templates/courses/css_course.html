@@ -1,0 +1,233 @@
+{%extends 'default.html'%}
+{%load static%}
+
+{%block title%}CSS History{%endblock%}
+
+{%block content%}
+<h1>CSS History</h1>
+<img src="https://d33wubrfki0l68.cloudfront.net/71d3785b8d02f17b1ce25770bbb056bc03f9f537/3fc65/static/b934233c97b5715fa7a2c9d5ac299b7c/6aca1/2019-10-02-css.jpg" alt="css image">
+<section id="history-h-1"><h2>The CSS saga</h2>
+
+   <p>The saga of CSS starts in 1994. Håkon Wium Lie works at
+    CERN – the cradle of the Web – and the Web is starting
+    to be used as a platform for electronic publishing. One crucial
+    part of a publishing platform is missing, however: There is no way
+    to style documents. For example, there is no way to describe a
+    newspaper-like layout in a Web page. Having worked on personalized
+    newspaper presentations at the MIT Media Laboratory, Håkon
+    saw the need for a style sheet language for the Web.
+
+   </p><p>Style sheets in browsers were not an entirely new idea. The
+    separation of document structure from the document's layout had
+    been a goal of HTML from its inception in 1990. Tim Berners-Lee
+    wrote his NeXT browser/editor in such a way that he could
+    determine the style with a simple style sheet. However, he didn't
+    publish the syntax for the style sheets, considering it a matter
+    for each browser to decide how to best display pages to its users.
+    In 1992, Pei Wei developed a browser called <q>Viola,</q> which
+    had its own style sheet language.
+
+   </p><p>However, the browsers that followed offered their users fewer
+    and fewer options to influence the style. In 1993, NCSA Mosaic,
+    the browser that made the Web popular, came out. Stylewise,
+    however, it was a backward step because it only allowed its users
+    to change certain colors and fonts.
+
+   </p><p>Meanwhile, writers of Web pages complained that they didn't have
+    enough influence over how their pages looked. One of the first
+    questions from an author new to the Web was how to change fonts
+    and colors of elements. At that time, HTML did not provide this
+    functionality – and rightfully so. This excerpt from a
+    message sent to the <em>www-talk</em> mailing list early in 1994
+    gives a sense of the tensions between authors and implementors:</p>
+
+   <aside>
+    <p>The message is available from the archives at <span class="url"><a href="http://www.webhistory.org/www.lists/www-talk.1994q1/0648.html">http://&ZeroWidthSpace;www.&ZeroWidthSpace;webhistory.&ZeroWidthSpace;org/&ZeroWidthSpace;www.lists/&ZeroWidthSpace;www-talk.1994q1/&ZeroWidthSpace;0648.html</a></span></p>
+   </aside>
+
+   <blockquote class="e-mail">
+    <p>In fact, it has been a constant source of delight for me over
+     the past year to get to continually tell hordes (literally) of
+     people who want to -- strap yourselves in, here it comes --
+     control what their documents look like in ways that would be
+     trivial in TeX, Microsoft Word, and every other common text
+     processing environment: "Sorry, you're screwed."
+    </p></blockquote>
+
+   <p>The author of the message was Marc Andreessen, one of the
+    programmers behind NCSA Mosaic. He later became a co-founder of
+    Netscape, a company eager to fulfill the request of authors. On
+    October&nbsp;13, 1994, Marc Andreessen announced to <em>www-talk</em>
+    that the first beta release of Mozilla (which later turned into
+    Netscape Navigator) was available for testing. Among the new tags
+    the new browser supported was <span class="element">center</span>,
+    and more tags were to follow shortly.</p>
+
+   <aside>
+    <p>The <a href="../../People/howcome/p/cascade.html">original</a>
+     is online.</p>
+   </aside>
+
+   <p>Three days before Netscape announced the availability of its new
+    browser, Håkon published the first draft of the
+    <em>Cascading HTML Style Sheets</em> proposal. Behind the scenes,
+    Dave Raggett (the main architect of HTML&nbsp;3.0) had encouraged the
+    release of the draft to go out before the upcoming <q>Mosaic and
+    the Web</q> conference in Chicago. Dave had realized that HTML
+    would and should never turn into a page-description language and
+    that a more purpose-built mechanism was needed to satisfy
+    requirements from authors. Although the first version of the
+    document was immature, it provided a useful basis for discussion.</p>
+
+   <aside>
+    <p>The Argo browser was part of a project to make the Internet
+     accessible to scholars in the Humanities. It featured plug-ins
+     (which it called <q>applets</q>) before Netscape added them. See
+     <a href="../../People/Bos/stylesheets.html"><cite>Stream-based
+     Style sheet Proposal</cite></a> and <a href="../../People/Bos/argo.html"><cite>Argo: summary of
+     features</cite></a>.</p>
+   </aside>
+
+   <p>Among the people who responded to the first draft of CSS was
+    Bert Bos. At that time, he was
+    building Argo, a highly customizable browser with style sheets,
+    and he decided to join forces with Håkon. Both of the two
+    proposals look different from present-day CSS, but it is not hard
+    to recognize the original concepts.
+
+   </p><p>One of the features of the Argo style language was that it was
+    general enough to apply to other markup languages in addition to
+    HTML. This also became a design goal in CSS and <q>HTML</q> was
+    soon removed from the title of the specification. Argo also had
+    other advanced features that didn't make it into CSS1, in
+    particular, attribute selectors and generated text. Both features
+    had to wait for CSS2.</p>
+
+   <aside>
+    <p>Robert Raisch's message to www-talk is at <a class="url" href="http://www.webhistory.org/www.lists/www-talk.1993q2/0445.html">http://&ZeroWidthSpace;www.&ZeroWidthSpace;webhistory.&ZeroWidthSpace;org/&ZeroWidthSpace;www.lists/&ZeroWidthSpace;www-talk.1993q2/&ZeroWidthSpace;0445.html</a></p>
+   </aside>
+
+   <p><q>Cascading Style Sheets</q> wasn't the only proposed style
+    language at the time. There was Pei Wei's language from the Viola
+    browser, and around 10 other proposals for style sheet languages
+    were sent to the <em>www-talk</em> and <em>www-html</em> mailing
+    lists. Then, there was DSSSL, a complex style and transformation
+    language under development at ISO for printing SGML documents.
+    DSSSL could conceivably be applied to HTML as well. But, CSS had
+    one feature that distinguished it from all the others: It took
+    into account that on the Web, the style of a document couldn't be
+    designed by either the author or the reader on their own, but that
+    their wishes had to be combined, or <q>cascaded,</q> in some way;
+    and, in fact, not just the reader's and the author's wishes, but
+    also the capabilities of the display device and the browser.
+
+   </p><p>As planned, the initial CSS proposal was presented at the Web
+    conference in Chicago in November 1994. The presentation at
+    Developer's Day caused much discussion. First, the concept of a
+    balance between author and user preferences was novel. A
+    fictitious screen shot showed a slider with the label <q>user</q>
+    on one side and <q>author</q> on the other. By adjusting the
+    slider, the user could change the mix of his own preferences and
+    those of the author. Second, CSS was perceived by some as being
+    too simple for the task it was designed for. They argued that to
+    style documents, the power of a full programming language was
+    needed. CSS went in the exact opposite direction by making a point
+    out of being a simple, declarative format.</p>
+
+   <aside>
+    <p>WWW3, the third conference in the WWW series, was held on
+     April 10–14, 1995, in Darmstadt, Germany</p>
+   </aside>
+
+   <p>At the next WWW conference in April 1995, CSS was presented
+    again. Both Bert and Håkon were there (in fact, this was the
+    first time they met in person) and this time, they could also show
+    implementations. Bert presented the support for style sheets in
+    Argo, and Håkon showed a version of the Arena browser that
+    had been modified to support CSS. Arena had been written by Dave
+    Raggett as a testbed for new ideas, and one of them was style
+    sheets. What started out as technical presentations ended up in
+    political discussions about the author-reader balance.
+    Representatives from the <q>author</q> side argued that the author
+    ultimately had to be in charge of deciding how documents were
+    presented. For example, it was argued that there may be legal
+    requirements on how warning labels had to be printed and the user
+    should not be able to reduce the font size for such warnings. The
+    other side, where Bert and Håkon belong, argued that the
+    user, whose eyes and ears ultimately have to decode the
+    presentation, should be given the last word when conflicts
+    arise.</p>
+
+   <aside>
+    <p>To subscribe to the mailing list or search the archives, see <a class="url" href="http://lists.w3.org/Archives/Public/www-style">http://lists.w3.org/&ZeroWidthSpace;Archives/&ZeroWidthSpace;Public/&ZeroWidthSpace;www-style</a></p>
+   </aside>
+
+   <p>Outside of the political battles, the technical work continued.
+    The <em>www-style</em> mailing list was created in May 1995, and
+    the discussions there have often influenced the development of the
+    CSS specifications. Almost 10 years later, there were more than
+    16,000 messages in the archives of the mailing list. And after 20
+    years, more than 80,000!
+
+   </p><figure>
+    <figcaption>Håkon Wium Lie, 12&nbsp;December 1995</figcaption>
+
+    <img src="950636c-W3C.jpg" alt="(photo) sitting at a dinner table">
+   </figure>
+
+   <p>In 1995, the World Wide Web Consortium (W3C) also became
+    operational. Companies were joining the Consortium at a high rate
+    and the organization became established. Workshops on various
+    topics were found to be a successful way for W3C members and staff
+    to meet and discuss future technical development. It was therefore
+    decided that another workshop should be organized, this time with
+    style sheets as the topic. The W3C technical staff working on
+    style sheets (namely Håkon and Bert) were now located in
+    Sophia-Antipolis in Southern France where W3C had set up its
+    European site. Southern France is not the worst place to lure
+    workshop participants to, but because many of the potential
+    participants were in the U.S., it was decided to hold the workshop
+    in Paris, which is better served by international flights. The
+    workshop was also an experiment to see if it was possible for W3C
+    to organize events outside the U.S. Indeed, this turned out to be
+    possible, and the workshop was a milestone in ensuring style
+    sheets their rightful place on the Web. Among the participants was
+    Thomas Reardon of Microsoft, who pledged support for CSS in
+    upcoming versions of Internet Explorer.
+
+   </p><figure>
+    <figcaption>Bert Bos, 12&nbsp;December 1995</figcaption>
+
+    <img src="950628c-W3C.jpg" alt="(photo) sitting at a dinner table">
+   </figure>
+
+   <p>At the end of 1995, W3C set up the HTML Editorial Review Board
+    (HTML ERB) to ratify future HTML specifications. Because style
+    sheets were within the sphere of interest of the members of the
+    new group, the CSS specification was taken up as a work item with
+    the goal of making it into a W3C Recommendation. Among the members
+    of the HTML ERB was Lou Montulli of Netscape. After Microsoft
+    signaled that it was adding CSS support in its browser, it was
+    also important to get Netscape on board. Otherwise, we could see
+    the Web diverge in different directions with browsers supporting
+    different specifications. The battles within the HTML ERB were
+    long and hard, but CSS level&nbsp;1 finally emerged as a W3C
+    Recommendation in December 1996.
+
+   </p><p>In February 1997, CSS got its own working group inside W3C and
+    the new group set out to work on the features which CSS1 didn't
+    address. The group was chaired by Chris Lilley, a Scotsman
+    recruited to W3C from the University of Manchester. CSS
+    level&nbsp;2 became a Recommendation in May 1998. Since then, the
+    group has worked in parallel on new CSS modules and errata for
+    CSS&nbsp;2.
+
+   </p><p>The W3C working group has members (around 15 in 1999, around 115
+    in 2016) who are delegated by the companies and organizations
+    that are members of W3C. They come from all over the world, so the
+    <q>meetings</q> are usually over the phone, and last about an hour
+    every week. About four times each year, they meet somewhere in the
+    world.</p>
+   </section>
+
+{%endblock%}

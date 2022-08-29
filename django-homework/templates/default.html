@@ -1,0 +1,25 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+<head>
+ {%include 'partial/_head.html'%}
+</head>
+<body>
+<nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><a href='/courses/'>Home</a></li>
+    <li><a class='dropdown-arrow' href='/courses/'>Courses</a>
+      <ul class='sub-menus'>
+        <li><a href='/courses/html/'>HTML</a></li>
+        <li><a href='/courses/css/'>CSS</a></li>
+        <li><a href='/courses/javascript/'>JAVASCRIPT</a></li>
+        <li><a href='/courses/python/'>PYTHON</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    {%block content%}{%endblock%}
+</body>
+</html>
+

@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef41d753-bf62-426b-8c6c-bbb77dc84bcc" name="Changes" comment="POO">
-      <change afterPath="$PROJECT_DIR$/django-homework/courses/templates/courses/css_course.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-homework/courses/templates/courses/html_course.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-homework/courses/templates/courses/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-homework/courses/templates/courses/javascript_course.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-homework/courses/templates/courses/python_course.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-homework/courses/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-homework/templates/default.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-homework/templates/partial/_head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django-homework/templates/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/py_guest01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_guest01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

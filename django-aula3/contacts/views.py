@@ -1,6 +1,9 @@
 from django.shortcuts import render
+from .models import Contact, Category
 
 
 def index(request):
-    pass
-    # return render(request, 'contacts/index.html')
+    contacts = Contact.objects.all()
+    return render(request, 'contacts/index.html', {
+        'contacts': contacts
+    })

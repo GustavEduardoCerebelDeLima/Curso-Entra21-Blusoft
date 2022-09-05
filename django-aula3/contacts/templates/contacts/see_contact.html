@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Schedule</title>
+   {% include 'contacts/partials/_head.html' %}
+</head>
+<body>
+{% include 'contacts/partials/_nav.html' %}
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="mt-5">{{ contact.name }} {{ contact.nickname }}</h1>
+        <dl>
+          <dt>ID</dt>
+          <dd>{{ contact.id }}</dd>
+
+          <dt>Phone</dt>
+          <dd>{{ contact.cell }}</dd>
+
+          <dt>E-mail</dt>
+          <dd>{{ contact.mail }}</dd>
+
+          <dt>Register Date</dt>
+          <dd>{{ contact.register_date }}</dd>
+
+          <dt>Category</dt>
+          <dd>{{ contact.categories }}</dd>
+
+          <dt>description</dt>
+          <dd>
+            {{ contact.description }}
+          </dd>
+        </dl>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

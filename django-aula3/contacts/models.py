@@ -16,7 +16,7 @@ class Contact(models.Model):
     mail = models.EmailField()
     register_date = models.DateField(default=timezone.now)
     description = models.TextField(blank=True)
-    photo = models.ImageField(blank=True)
+    # photo = models.ImageField(blank=True)
     categories = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
 
     def __str__(self):

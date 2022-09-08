@@ -3,7 +3,7 @@ from .models import Contact, Category
 
 
 def index(request):
-    contacts = Contact.objects.order_by('name')
+    contacts = Contact.objects.order_by('-id')
     return render(request, 'contacts/index.html', {
         'contacts': contacts
     })

@@ -27,6 +27,29 @@
         </ul>
       </div>
     </nav>
-    {% include 'contacts/partials/_content.html' %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Categories</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for field in contact %}
+    <tr>
+      <th scope="row">{{ field.id }}</th>
+      <td>
+        <a href="{% url 'see_family' %}">{{ field.name }}</a>
+      </td>
+      <td>{{ field.nickname }}</td>
+      <td>{{ field.cel }}</td>
+      <td>{{ field.categories }}</td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>
 </body>
 </html>

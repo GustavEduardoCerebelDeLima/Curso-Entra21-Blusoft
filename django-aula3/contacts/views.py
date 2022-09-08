@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Contact, Category
-from .forms import RegisterForm
+# from .forms import RegisterForm
 
 
 def index(request):
@@ -42,15 +42,15 @@ def see_family(request):
 #     })
 
 
-def register(request):
-    if request.method == 'GET':
-        form = RegisterForm()
-        return render(request, 'contacts/register_form.html', {'form': form})
-    else:
-        form = RegisterForm(request.POST)
-        if form.is_valid():
-            register = form.save()
-            form = RegisterForm()
-            return index(request)
-        else:
-            return render(request, 'contacts/register_form.html', {'form': form})
+# def register(request):
+#     if request.method == 'GET':
+#         form = RegisterForm()
+#         return render(request, 'contacts/register_form.html', {'form': form})
+#     else:
+#         form = RegisterForm(request.POST)
+#         if form.is_valid():
+#             register = form.save()
+#             form = RegisterForm()
+#             return index(request)
+#         else:
+#             return render(request, 'contacts/register_form.html', {'form': form})

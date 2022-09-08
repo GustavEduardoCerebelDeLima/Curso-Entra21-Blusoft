@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef41d753-bf62-426b-8c6c-bbb77dc84bcc" name="Changes" comment="POO">
-      <change afterPath="$PROJECT_DIR$/tests/code_tcc_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django-aula3/contacts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django-aula3/contacts/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

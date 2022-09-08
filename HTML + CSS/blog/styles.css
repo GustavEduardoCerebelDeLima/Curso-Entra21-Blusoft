@@ -1,0 +1,10 @@
+body {
+    background: rgb(4,128,179);
+    background: radial-gradient(circle, rgba(4,128,179,1) 0%, rgba(23,59,97,1) 99%, rgba(0,140,173,1) 100%); 
+    color: white;
+}
+
+.img {
+    background-image: url(https://cdn.pixabay.com/photo/2020/01/22/12/33/python-4785225_960_720.jpg);
+    color: yellow !important;
+}

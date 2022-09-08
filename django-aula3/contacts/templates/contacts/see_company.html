@@ -1,32 +1,34 @@
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--  <title>Schedule</title>-->
-<!--   {% include 'contacts/partials/_head.html' %}-->
-<!--</head>-->
-<!--<body>-->
-<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--      <a class="navbar-brand" href="#">Navbar</a>-->
-<!--      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--      </button>-->
-<!--      <div class="collapse navbar-collapse" id="navbarNav">-->
-<!--        <ul class="navbar-nav">-->
-<!--          <li class="nav-item active">-->
-<!--            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="{% url 'see_family' %}">Family</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="{% url 'see_friends' %}">Friends</a>-->
-<!--          </li>-->
-<!--            <li class="nav-item">-->
-<!--            <a class="nav-link" href="{% url 'see_company' %}">Company</a>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </nav>-->
-<!--    {% include 'contacts/partials/_content.html' %}-->
-<!--</body>-->
-<!--</html>-->
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Schedule</title>
+   {% include 'contacts/partials/_head.html' %}
+</head>
+<body>
+   {% include 'contacts/partials/_nav.html' %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Categories</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for field in contact %}
+    <tr>
+      <th scope="row">{{ field.id }}</th>
+      <td>
+        <a href="">{{ field.name }}</a>
+      </td>
+      <td>{{ field.nickname }}</td>
+      <td>{{ field.cel }}</td>
+      <td>{{ field.categories }}</td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>
+</body>
+</html>

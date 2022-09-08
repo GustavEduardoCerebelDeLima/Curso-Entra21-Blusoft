@@ -22,24 +22,24 @@ def see_family(request):
     return render(request, 'contacts/see_family.html', {
         'contact': contact
     })
-# #
-#
-# def see_friends(request, contact_category):
-#     contact = Contact.objects.get(categories=contact_category).filter(
-#         categories=2
-#     )
-#     return render(request, 'contacts/see_friends.html', {
-#         'contact': contact
-#     })
-#
-#
-# def see_company(request, contact_category):
-#     contact = Contact.objects.get(categories=contact_category).filter(
-#         categories=3
-#     )
-#     return render(request, 'contacts/see_company.html', {
-#         'contact': contact
-#     })
+
+
+def see_friends(request):
+    contact = Contact.objects.filter(
+        categories='3'
+    )
+    return render(request, 'contacts/see_friends.html', {
+        'contact': contact
+    })
+
+
+def see_company(request):
+    contact = Contact.objects.filter(
+        categories='2'
+    )
+    return render(request, 'contacts/see_company.html', {
+        'contact': contact
+    })
 
 
 # def register(request):
